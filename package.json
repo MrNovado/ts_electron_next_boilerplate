@@ -1,0 +1,56 @@
+{
+  "private": true,
+  "name": "ts_electron_next_boilerplate",
+  "productName": "ts_electron_next_boilerplate",
+  "description": "ts_electron_next_boilerplate",
+  "version": "0.0.1",
+  "main": "compiled/application/index.js",
+  "repository": "ts_electron_next_boilerplate",
+  "build": {
+    "appId": "ts.electron.next.boilerplate",
+    "directories": {
+      "app": "./compiled",
+      "output": "./distribution"
+    },
+    "extraFiles": [
+      {
+        "from": "./logs",
+        "to": "./logs",
+        "filter": []
+      }
+    ]
+  },
+  "scripts": {
+    "start": "sh script-compile-main.sh && npm run next:test",
+    "start:main": "sh script-compile-main.sh",
+    "dist": "sh script-build-dist.sh",
+    "next:test": "next build renderer",
+    "next:dist": "next build renderer && next export -o ./compiled/renderer renderer"
+  },
+  "devDependencies": {
+    "@types/app-root-path": "^1.2.4",
+    "@types/node": "^12.6.1",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-redux": "^7.1.1",
+    "@types/styled-components": "^4.1.15",
+    "electron": "5.0.6",
+    "electron-builder": "^20.44.4",
+    "electron-devtools-installer": "^2.2.4",
+    "prettier": "^1.17.1",
+    "tscpaths": "0.0.9",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "app-root-path": "^2.2.1",
+    "electron-is-dev": "^0.3.0",
+    "log4js": "^4.5.1",
+    "next": "^9.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.2",
+    "reselect": "^4.0.0",
+    "styled-components": "^4.3.2"
+  }
+}

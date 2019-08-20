@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.commons.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "lib": ["dom", "es2017"],
+    "noEmit": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "esnext"
+  }  
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.commons.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "./compiled"
+  },
+  "include": [
+    "./application/**/*",
+    "./constants/**/*",
+    "./redux_store/**/*"
+  ]
+}
